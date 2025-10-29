@@ -1,4 +1,5 @@
 # custom_components/ewouts_hacs_integration/sensor.py
+# ChatGPT made this file, mostly
 from __future__ import annotations
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.config_entries import ConfigEntry
