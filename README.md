@@ -21,5 +21,23 @@ Note that besides the structure, these files also need content. This repo provid
 
 If you are interested in making your own custom integration, from here on you can follow [this video](https://www.youtube.com/watch?app=desktop&v=e3VwPb72Bbg). But of doing all of work directly in VS Code *on* HA, I recommend you make a repo and use the info we went through above.
 
+# Json files explained
+Unfortunately comments are not supported in json files. Therefore they are here with comments:
+```manifest.json
+{
+    "domain": "Ewouts_Intergration",  // How it is named within the HA ecosystem
+    "name": "Ewouts HACS Integration",  // The human friendly name of the integration
+    "requirements": ["numpy"],  // Any Python dependencies required by the integration
+    "iot_class": "local_polling",  // The type of integration (e.g., local polling, cloud push) more info: https://developers.home-assistant.io/docs/creating_integration_manifest/#iot-class
+    "documentation": "https://github.com/EwoutBergsma/My_HACS_Integration",
+    "version": "0.0.1",
+    "codeowners": [],
+    "dependencies": []  // What's the difference between dependencies and requirements?
+}
+```
 
-
+```hacs.json
+{
+  "name": "Ewouts Awesome Integration"  // More info: https://www.hacs.xyz/docs/publish/start/#hacsjson
+}
+```
