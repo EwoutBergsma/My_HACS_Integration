@@ -41,3 +41,14 @@ Unfortunately comments are not supported in json files. Therefore they are here 
   "name": "Ewouts Awesome Integration"  // More info: https://www.hacs.xyz/docs/publish/start/#hacsjson
 }
 ```
+
+# Installing the Custom Integration
+Once you have added the custom repository (to the store), you can install it through HACS by searching for its name (the one you set in `hacs.json`) in the HACS dashboard. Click on it and then click the "Download" button in the bottom right corner. After installation, restart Home Assistant to complete the setup. 
+
+After that it should be available to add through the "Add Integration" button in the Home Assistant settings under "Devices & Services".
+
+
+# TODO
+- [ ] Currently when adding the integration, it will tell you to add it to `configuration.yaml` manually, instead of using the UI. I want this to be different.
+- [ ] ChatGPT told me to make the folder without capital letters, not sure if it is right (i.e. `custom_components/ewouts_hacs_integration/
+- [ ] ChatGPT told me to make the domain in `manifest.json` without capitals, not sure if it is right (i.e. "domain": "ewouts_hacs_integration")
