@@ -1,0 +1,1 @@
+"""Ewout's HACS Integration custom component for Home Assistant."""

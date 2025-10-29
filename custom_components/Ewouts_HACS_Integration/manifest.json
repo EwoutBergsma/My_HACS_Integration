@@ -1,0 +1,10 @@
+{
+    "domain": "Ewouts_Intergration",  // How it is named within the HA ecosystem
+    "name": "Ewouts HACS Integration",  // The human friendly name of the integration
+    "requirements": ["numpy"],  // Any Python dependencies required by the integration
+    "iot_class": "local_polling",  // The type of integration (e.g., local polling, cloud push) more info: https://developers.home-assistant.io/docs/creating_integration_manifest/#iot-class
+    "documentation": "https://github.com/EwoutBergsma/My_HACS_Integration",
+    "version": "0.0.1",
+    "codeowners": [],
+    "dependencies": []  // What's the difference between dependencies and requirements?
+}
