@@ -7,9 +7,7 @@ import voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.core import HomeAssistant
 from homeassistant.const import CONF_NAME
-
-
-DOMAIN = "ewouts_hacs_integration"  # e.g. "ewouts_hacs_integration"
+from .const import DOMAIN
 
 DATA_SCHEMA = vol.Schema({
     vol.Required(CONF_NAME, default="Ewout Demo"): str,

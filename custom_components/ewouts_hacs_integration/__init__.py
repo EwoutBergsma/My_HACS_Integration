@@ -4,9 +4,7 @@ from __future__ import annotations
 from homeassistant.core import HomeAssistant
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
-
-DOMAIN = "ewouts_hacs_integration"
-
+from .const import DOMAIN
 
 PLATFORMS: list[Platform] = [Platform.SENSOR]  # add others as needed
 
