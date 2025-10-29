@@ -4,7 +4,7 @@
     "requirements": ["numpy"], 
     "iot_class": "local_polling",
     "documentation": "https://github.com/EwoutBergsma/My_HACS_Integration",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "codeowners": [],
     "dependencies": [],
     "config_flow": true
