@@ -11,7 +11,7 @@ The most right top button with the three dots is the menu button in the HACS int
 The repository that you want to add is required to meet a few criteria before HACS will accept it. You can find the [criteria](https://hacs.xyz/docs/publish/integration):
 ```filetree
 custom_components/INTEGRATION_NAME/__init__.py  // Of course, change INTEGRATION_NAME to your integration name
-custom_components/INTEGRATION_NAME/PLATFORM_NAME.py  // Also, change PLATFORM_NAME to the type of integration you are making (e.g. light, sensor) more info: https://developers.home-assistant.io/docs/creating_platform_index/
+custom_components/INTEGRATION_NAME/PLATFORM_NAME.py  // Also, change PLATFORM_NAME to the type of integration you are making (e.g. light, sensor) more info: https://developers.home-assistant.io/docs/creating_platform_index/, or: https://www.home-assistant.io/integrations/?brands=featured
 custom_components/INTEGRATION_NAME/manifest.json
 README.md
 hacs.json
