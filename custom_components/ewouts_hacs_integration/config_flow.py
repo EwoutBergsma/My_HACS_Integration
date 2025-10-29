@@ -35,8 +35,8 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 errors["base"] = "cannot_connect"
             else:
                 # Prevent duplicates if your integration has a single instance
-                await self.async_set_unique_id(DOMAIN)
-                self._abort_if_unique_id_configured()
+                # await self.async_set_unique_id(DOMAIN)  # Ewout removed this line to allow multiple instances
+                # self._abort_if_unique_id_configured()  # Ewout removed this line to allow multiple instances
                 return self.async_create_entry(title=info["title"], data=user_input)
 
         return self.async_show_form(step_id="user", data_schema=DATA_SCHEMA, errors=errors)
