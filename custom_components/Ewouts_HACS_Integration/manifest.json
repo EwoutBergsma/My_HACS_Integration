@@ -1,5 +1,5 @@
 {
-    "domain": "Ewouts_Intergration",
+    "domain": "Ewouts_HACS_Integration",
     "name": "Ewouts HACS Integration",
     "requirements": ["numpy"], 
     "iot_class": "local_polling",
