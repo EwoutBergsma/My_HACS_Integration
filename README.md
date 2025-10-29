@@ -23,6 +23,8 @@ If you are interested in making your own custom integration, from here on you ca
 
 # Json files explained
 Unfortunately comments are not supported in json files. Therefore they are here with comments:
+
+`manifest.json`:
 ```manifest.json
 {
     "domain": "Ewouts_Intergration",  // How it is named within the HA ecosystem
@@ -32,10 +34,12 @@ Unfortunately comments are not supported in json files. Therefore they are here 
     "documentation": "https://github.com/EwoutBergsma/My_HACS_Integration",
     "version": "0.0.1",
     "codeowners": [],
-    "dependencies": []  // What's the difference between dependencies and requirements?
+    "dependencies": [],  // What's the difference between dependencies and requirements?
+    "config_flow": true  // Enables UI configurability (otherwise you need to add it manually to configuration.yaml)
 }
 ```
 
+`hacs.json`:
 ```hacs.json
 {
   "name": "Ewouts Awesome Integration"  // More info: https://www.hacs.xyz/docs/publish/start/#hacsjson
