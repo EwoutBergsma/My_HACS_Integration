@@ -1,39 +1,25 @@
-# This file is based on: https://github.com/home-assistant/example-custom-config/tree/master/custom_components/example_sensor
-"""Platform for sensor integration."""
+# custom_components/ewouts_hacs_integration/sensor.py
 from __future__ import annotations
-
-from homeassistant.components.sensor import (
-    SensorDeviceClass,
-    SensorEntity,
-    SensorStateClass,
-)
-from homeassistant.const import UnitOfTemperature
+from homeassistant.components.sensor import SensorEntity
+from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType
+from .const import DOMAIN
 
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback):
+    data = hass.data[DOMAIN][entry.entry_id]
+    name = data["name"]
+    async_add_entities([EwoutDemoSensor(name)], update_before_add=True)
 
-def setup_platform(
-    hass: HomeAssistant,
-    config: ConfigType,
-    add_entities: AddEntitiesCallback,
-    discovery_info: DiscoveryInfoType | None = None
-) -> None:
-    """Set up the sensor platform."""
-    add_entities([EwoutsSensor()])
+class EwoutDemoSensor(SensorEntity):
+    _attr_native_unit_of_measurement = "units"
+    _attr_name: str
 
+    def __init__(self, name: str) -> None:
+        self._attr_name = f"{name} Value"
+        self._value = 0
 
-class EwoutsSensor(SensorEntity):
-    """Representation of a Sensor."""
-
-    _attr_name = "Example Temperature"
-    _attr_native_unit_of_measurement = UnitOfTemperature.CELSIUS
-    _attr_device_class = SensorDeviceClass.TEMPERATURE
-    _attr_state_class = SensorStateClass.MEASUREMENT
-
-    def update(self) -> None:
-        """Fetch new state data for the sensor.
-
-        This is the only method that should fetch new data for Home Assistant.
-        """
-        self._attr_native_value = 23
+    async def async_update(self) -> None:
+        # fetch/update your value here
+        self._value += 1
+        self._attr_native_value = self._value

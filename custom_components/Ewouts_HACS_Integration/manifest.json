@@ -6,5 +6,7 @@
     "documentation": "https://github.com/EwoutBergsma/My_HACS_Integration",
     "version": "0.0.1",
     "codeowners": [],
-    "dependencies": []
+    "dependencies": [],
+    "config_flow": true
+
 }

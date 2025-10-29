@@ -47,6 +47,13 @@ Once you have added the custom repository (to the store), you can install it thr
 
 After that it should be available to add through the "Add Integration" button in the Home Assistant settings under "Devices & Services".
 
+# Create UI configurability
+With just the basic structure that is explained above, you still need to add the integration manually to your `configuration.yaml` file. Instead, you can make the integration configurable through the Home Assistant UI.
+
+Adding `config_flow": true` to the `manifest.json` file will allow you to add the integration through the Home Assistant UI. After, a file named `config_flow.py` should be added to the integration folder (i.e. `custom_components/Ewouts_HACS_Integration/config_flow.py`). This file will contain the logic for the configuration flow, allowing users to set up the integration through the UI. 
+
+The HA UI also expects `custom_components/Ewouts_HACS_Integration/strings.json` (which can later also be used for translations). Moreover, we now need to modify `__init__.py` to support the config flow. Lastly, the `sensor.py` needs to be updated too. For these changes just go back in to previous commits to see what has changed.
+
 
 # TODO
 - [ ] Currently when adding the integration, it will tell you to add it to `configuration.yaml` manually, instead of using the UI. I want this to be different.
