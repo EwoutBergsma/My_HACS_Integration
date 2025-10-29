@@ -64,3 +64,4 @@ The HA UI also expects `custom_components/Ewouts_HACS_Integration/strings.json` 
 - [x] ChatGPT told me to make the folder without capital letters, not sure if it is right (i.e. `custom_components/ewouts_hacs_integration/
 - [x] ChatGPT told me to make the domain in `manifest.json` without capitals, not sure if it is right (i.e. "domain": "ewouts_hacs_integration")
 - [x] Giving the sensor an unique ID in an attempt to allow the cogwheel button in the UI
+- [x] Allow multiple instances of the integration entries (i.e. multiple sensors of the same type with different configurations)
